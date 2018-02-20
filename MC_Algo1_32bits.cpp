@@ -15,21 +15,25 @@ using namespace std;
 /********************************************************************/
 /**************************    CONSTANTS    *************************/
 /********************************************************************/
-    const string data_file_name = "dataset.txt"; // data file name
-    const unsigned int n = 9; //20;              // number of spins
+//info datafile: TO SPECIFY:
+    const string data_file_name = "dir1/dataset.txt"; // directory/name of the datafile
+    const unsigned int n = 9;                    // number of spins
     const unsigned int m = 3;                    // chosen number of independent operators
 
+//MC output file: 
+    const string directory = "dir2/";  // directory for the outputfile
+    const string MC_fileOUT = directory + "outputfile_name";  // name of the output file
+
+//for Monte Carlo: 
+    const int N_MCsample = 1e5;       // number of MC steps
+    const double beta = 0.1;          // 1./temperature
+    const int N_shuffling = 5;        // see doc.
+    const double eps = 1e-2;    //for post-treatment: function "post_treatment_bases()"
+
+//do not modify:
     const uint32_t un = 1;
     const uint32_t Nop = (un << m) - 1;          // number of operators = 2^m - 1
     unsigned int N = 0;                          // data set size
-
-//for Monte Carlo: 
-    const int N_MCsample = 1e5;
-    const double beta = 0.1;
-    const int N_shuffling = 5;
-    const string directory = "directory/";
-    const string MC_fileOUT = directory + "outputfile_name.dat";
-    const double eps = 1e-2;    //for post-treatment: function "post_treatment_bases()"
 
 //Structure containing the final information on the best model, at the end of the MC
 struct FinalModel
