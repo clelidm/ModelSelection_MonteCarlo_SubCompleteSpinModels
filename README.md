@@ -11,6 +11,15 @@
 The input datafile must be a __list of *n*-bit binary numbers__, each bit representing a spin variable (binary variable).
 Each line is a datapoint. The file must have no space between the columns (the bits of the same number).
 
+   __Ex.__ 4 first datapoints of an input file with *n=10* spin variables:
+   
+          0001000000
+          1000100001
+          0000000100
+          0000100000
+          
+   Each column is a spin; Each line is a datapoint.
+
 At __maximum *n*=32__:  datapoints are treated by the program as integers encoded on 32 bits, 
 the lowest bit being the last column of your datafile.
 The program could easily be extended to larger values of *n*. 
@@ -35,3 +44,13 @@ the details of the MC steps will be printed in this file.
 You can also play with the parameters for the MC:
  - `const int N_MCsample`: total number of MC steps (including shuffling);
  - `const double beta`: the inverse of the temperature.
+ 
+ ### Compiling
+ 
+ For compiling, use the command:
+ 
+     `g++ -std=c++11 -O3 MC_Algo1_32bits.cpp`
+     
+You may want to use the option `-O3` of g++ to turn on some optimisations. If `-std=c++11` doesn't work, please try `-std=c++0x` instead. This command line is also reminded at the beginning of the `MC_Algo1_32bits.cpp` file.
+ 
+ 
