@@ -49,8 +49,13 @@ You can also play with the parameters for the MC:
  
  For compiling, use the command:
  
-     `g++ -std=c++11 -O3 MC_Algo1_32bits.cpp`
+     g++ -std=c++11 -O3 MC_Algo1_32bits.cpp
      
-You may want to use the option `-O3` of g++ to turn on some optimisations. If `-std=c++11` doesn't work, please try `-std=c++0x` instead. This command line is also reminded at the beginning of the `MC_Algo1_32bits.cpp` file.
+You may want to use the option `-O3` of g++ to turn on some optimisations. If `-std=c++11` doesn't work, please try `-std=c++0x` instead. This creates an executable `a.out`, that can be run using:
+
+     ./a.out
+
+You might want to rename the executable using the `-c` option of g++.
+These two command lines are reminded at the beginning of the `MC_Algo1_32bits.cpp` file.
  
  
