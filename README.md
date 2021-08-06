@@ -20,12 +20,13 @@ Each line is a datapoint. The file must have no space between the columns (the b
           
    Each column is a spin; Each line is a datapoint.
 
-At __maximum *n*=32__:  datapoints are treated by the program as integers encoded on 32 bits, 
+__At maximum *n*=32__: At maximum you can set the number of variables to *n=32*. The reason is that 
+datapoints are treated by the program as integers encoded on 32 bits, 
 the lowest bit being the last column of your datafile.
-The program could easily be extended to larger values of *n*. 
+The code itself could easily be extended to larger values of *n*. 
 However the present algorithm is efficient only for small values of *n*, and have difficulties to find the 
 global maximum for *n* larger than 25. 
-The search for the best sub-complete models in larger systems require an evolved version of this algorithm.
+The search for the best sub-complete models in larger systems would require an evolved version of this algorithm.
 
 ### Specification at the beginning of the `MC_Algo1_32bits.cpp` file
 
